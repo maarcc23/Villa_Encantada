@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class pantallasalir : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void AnarPantallaHistoria()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+       SceneManager.LoadScene("salir");
     }
 }
