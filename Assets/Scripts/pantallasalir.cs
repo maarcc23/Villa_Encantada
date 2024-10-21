@@ -6,6 +6,6 @@ public class pantallasalir : MonoBehaviour
 {
     public void AnarPantallaHistoria()
     {
-       SceneManager.LoadScene("salir");
+       //SceneManager.LoadScene("salir");
     }
 }
