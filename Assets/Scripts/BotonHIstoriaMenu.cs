@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class pantallahistoria : MonoBehaviour
+public class BotonHIstoriaMenu : MonoBehaviour
 {
-    public void AnarPantallaHistoria()
+  public void BotoHistoria()
     {
        SceneManager.LoadScene("HistoriaMenu");
     }
-    
 }

@@ -17,10 +17,19 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/salir.unity
     guid: d4bf96db94ccf974aa8b9788997e1a40
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/historia.unity
     guid: 0ba8fb7843096394289aa38935eb99a3
   - enabled: 1
     path: Assets/Scenes/instrucciones2.unity
     guid: 8978055fb6f3a3e46bd1e7c3315ccd3d
+  - enabled: 1
+    path: Assets/Scenes/HistoriaMenu.unity
+    guid: e2ab51bf2f387b647b7cb78608264bd7
+  - enabled: 1
+    path: Assets/Scenes/Inicio.unity
+    guid: 081e480e1a5d5a54bac141c344cb0658
+  - enabled: 1
+    path: Assets/Scenes/HistoriaMenuAjustes.unity
+    guid: 91f72ec873e4b3a49af8c0c7d71b1f94
   m_configObjects: {}
