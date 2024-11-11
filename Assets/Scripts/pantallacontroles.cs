@@ -7,6 +7,6 @@ public class pantallacontroles : MonoBehaviour
 {
     public void pantallasetting()
     {
-       SceneManager.LoadScene("Instrucciones");
+       SceneManager.LoadScene("Controles");
     }
 }
