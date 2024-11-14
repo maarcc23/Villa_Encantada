@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 095b4638dbf5279438d353a86b13655d
+guid: 3716c2005df9f914e9e17e2afca93e86
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,30 +93,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Personatge1Moviment_0
+      name: imatge_personatge principal (1)_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 73
+        y: 72
         width: 73.166664
-        height: 73
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b05e0a8f863ae70458de43306ebece50
-      internalID: -226765120
+      spriteID: 5f24333b7339d6748a58fca4e21443b9
+      internalID: 1479357504
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personatge1Moviment_1
+      name: imatge_personatge principal (1)_1
       rect:
         serializedVersion: 2
         x: 73
-        y: 73
+        y: 72
         width: 73.166664
-        height: 73
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 939e4b374469d6c44bab463e38969b5e
-      internalID: -1017561914
+      spriteID: 7e8e4c221cc6640419ba1a44df723b15
+      internalID: 239145914
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personatge1Moviment_2
+      name: imatge_personatge principal (1)_2
       rect:
         serializedVersion: 2
         x: 146
-        y: 73
+        y: 72
         width: 73.166664
-        height: 73
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +153,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6d70253dc5ae6ec488b6341ef104475e
-      internalID: 98259445
+      spriteID: c712670bcd5bd044a98a41677e4fedda
+      internalID: 507992229
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personatge1Moviment_3
+      name: imatge_personatge principal (1)_3
       rect:
         serializedVersion: 2
         x: 219
-        y: 73
+        y: 72
         width: 73.166664
-        height: 73
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c90943e67850c674795e51b0a9ac476a
-      internalID: -1015657342
+      spriteID: 55451df09673e7f4fbee7a009c33d572
+      internalID: 656547570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personatge1Moviment_4
+      name: imatge_personatge principal (1)_4
       rect:
         serializedVersion: 2
         x: 292
-        y: 73
+        y: 72
         width: 73.166664
-        height: 73
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +195,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbc21174745547245a6aec59ee746eac
-      internalID: -768691828
+      spriteID: 366bc180517b34145908f8032e62e47e
+      internalID: 1675805585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personatge1Moviment_5
+      name: imatge_personatge principal (1)_5
       rect:
         serializedVersion: 2
         x: 365
-        y: 73
+        y: 72
         width: 73.166664
-        height: 73
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +216,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3aa5ce448d544f49b59b2812a7c2901
-      internalID: 2038393576
+      spriteID: 7bd5813992cdf0e4db49eada98a632e0
+      internalID: -1459506158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personatge1Moviment_6
+      name: imatge_personatge principal (1)_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 73.166664
-        height: 73
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6914a58869c01ed4b9acfe44b7bd6533
-      internalID: 1136995500
+      spriteID: 0ef4c5bf61f1dca468bf623fa96eb2e7
+      internalID: 144880770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personatge1Moviment_7
+      name: imatge_personatge principal (1)_7
       rect:
         serializedVersion: 2
         x: 73
         y: 0
         width: 73.166664
-        height: 73
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,20 +258,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c03f2265123d26a4582107f5c52ef71b
-      internalID: 328749232
+      spriteID: 0632c997a8f8a5140b9c175155d46bc1
+      internalID: 152387583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personatge1Moviment_8
+      name: imatge_personatge principal (1)_8
       rect:
         serializedVersion: 2
         x: 146
         y: 0
         width: 73.166664
-        height: 73
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,20 +279,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e26f00ae3220e1445ab926932d9edc01
-      internalID: 89128470
+      spriteID: 7adcfcd911048474493401e2b93cd8e4
+      internalID: -1720186011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personatge1Moviment_9
+      name: imatge_personatge principal (1)_9
       rect:
         serializedVersion: 2
         x: 219
         y: 0
         width: 73.166664
-        height: 73
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,20 +300,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b1b844b2e9835840a8068b739e36b2d
-      internalID: -1320163166
+      spriteID: 61c113b76aa388442b9d3a6c8d3bdf2d
+      internalID: -1313763014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personatge1Moviment_10
+      name: imatge_personatge principal (1)_10
       rect:
         serializedVersion: 2
         x: 292
         y: 0
         width: 73.166664
-        height: 73
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -334,20 +321,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 515ed5c77485ff64b80df1f2277cfedb
-      internalID: -1057651549
+      spriteID: f84ea03fb551bd9469f950f5245b4d8d
+      internalID: -147811820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Personatge1Moviment_11
+      name: imatge_personatge principal (1)_11
       rect:
         serializedVersion: 2
         x: 365
         y: 0
         width: 73.166664
-        height: 73
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,8 +342,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b363e60d709f3542831af409c44a5f4
-      internalID: 224825487
+      spriteID: 355c948309666194a84a9295f9c36be5
+      internalID: -507178974
       vertices: []
       indices: 
       edges: []
@@ -372,18 +359,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Personatge1Moviment_0: -226765120
-      Personatge1Moviment_1: -1017561914
-      Personatge1Moviment_10: -1057651549
-      Personatge1Moviment_11: 224825487
-      Personatge1Moviment_2: 98259445
-      Personatge1Moviment_3: -1015657342
-      Personatge1Moviment_4: -768691828
-      Personatge1Moviment_5: 2038393576
-      Personatge1Moviment_6: 1136995500
-      Personatge1Moviment_7: 328749232
-      Personatge1Moviment_8: 89128470
-      Personatge1Moviment_9: -1320163166
+      imatge_personatge principal (1)_0: 1479357504
+      imatge_personatge principal (1)_1: 239145914
+      imatge_personatge principal (1)_10: -147811820
+      imatge_personatge principal (1)_11: -507178974
+      imatge_personatge principal (1)_2: 507992229
+      imatge_personatge principal (1)_3: 656547570
+      imatge_personatge principal (1)_4: 1675805585
+      imatge_personatge principal (1)_5: -1459506158
+      imatge_personatge principal (1)_6: 144880770
+      imatge_personatge principal (1)_7: 152387583
+      imatge_personatge principal (1)_8: -1720186011
+      imatge_personatge principal (1)_9: -1313763014
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
