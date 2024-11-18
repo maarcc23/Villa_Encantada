@@ -34,11 +34,11 @@ public class Personatge1 : MonoBehaviour
         float inputHorizontal = Input.GetAxisRaw("Horizontal")*_velocitatCorre;
         float inputVertical = Input.GetAxisRaw("Vertical") * _velocitatCorre;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        /*if (Input.GetKeyDown(KeyCode.Space))
         {
 
             _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x,_velocitatSaltar);
-        }
+        }*/
 
         _rigidbody2D.velocity = new Vector2(inputHorizontal,_rigidbody2D.velocity.y);
     }
