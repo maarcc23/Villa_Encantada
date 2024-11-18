@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class botonConfig : MonoBehaviour
+public class menuvolverJuego : MonoBehaviour
 {
-      public void config()
+   public void VolverJuegoreturn()
     {
-       SceneManager.LoadScene("instrucciones2");
+       SceneManager.LoadScene("game");
     }
 }
