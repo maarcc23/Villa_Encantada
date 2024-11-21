@@ -365,7 +365,7 @@ Transform:
   m_GameObject: {fileID: 500398975}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.61, y: 1.35, z: 0}
+  m_LocalPosition: {x: -1.99, y: 0.83, z: 0}
   m_LocalScale: {x: 3.5102, y: 3.3003, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -459,6 +459,10 @@ MonoBehaviour:
   _centreZonaContacteTerra: {fileID: 1981903986}
   _radiContacteTerra: 1
   _layereTerra:
+    serializedVersion: 2
+    m_Bits: 0
+  _radiInteraccio: 2
+  _layerPalanca:
     serializedVersion: 2
     m_Bits: 0
 --- !u!1 &583970839

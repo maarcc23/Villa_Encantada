@@ -29,13 +29,24 @@ public class InteractObject : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         // Verifica si el objeto que entra es el jugador
-        if (other.CompareTag("Player"))
+        if (collision.CompareTag("Player"))
         {
             isPlayerNearby = true;
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                ActivarPalanca();
+            }
         }
+    }
+
+    private void ActivarPalanca()
+    {
+        SceneManager.LoadScene("game");
+
+
     }
 
     void OnTriggerExit(Collider other)
