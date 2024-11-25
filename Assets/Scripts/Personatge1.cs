@@ -6,41 +6,38 @@ using UnityEngine.SceneManagement;
 public class Personatge1 : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
+    private Animator _animator; // Referencia al Animator
     private float _velocitatCorre;
-    private float _velocitatSaltar;
 
     public Transform _centreZonaContacteTerra;
     public float _radiContacteTerra;
     public LayerMask _layereTerra;
     private bool _tocaTerra;
 
-    // Start is called before the first frame update
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>(); // Obtiene el Animator
         _rigidbody2D.freezeRotation = true;
         _velocitatCorre = 5f;
-        _velocitatSaltar = 5f;
         _tocaTerra = false;
-
     }
 
-    // Update is called once per frame
     void Update()
-
     {
         _tocaTerra = Physics2D.OverlapCircle(_centreZonaContacteTerra.position, _radiContacteTerra, _layereTerra);
-
         Debug.DrawRay(_centreZonaContacteTerra.position, Vector2.down, Color.green);
-        float inputHorizontal = Input.GetAxisRaw("Horizontal")*_velocitatCorre;
-        float inputVertical = Input.GetAxisRaw("Vertical") * _velocitatCorre;
 
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
+        float inputHorizontal = Input.GetAxisRaw("Horizontal") * _velocitatCorre;
+        _rigidbody2D.velocity = new Vector2(inputHorizontal, _rigidbody2D.velocity.y);
 
-            _rigidbody2D.velocity = new Vector2(_rigidbody2D.velocity.x,_velocitatSaltar);
-        }*/
+        if (inputHorizontal > 0) { // Es mou a la dreta.
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        } else if (inputHorizontal < 0) { // Es mou a l'esquerra.
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
 
-        _rigidbody2D.velocity = new Vector2(inputHorizontal,_rigidbody2D.velocity.y);
+        // Actualiza el parámetro de velocidad en el Animator
+        _animator.SetFloat("Speed", Mathf.Abs(inputHorizontal));
     }
 }
