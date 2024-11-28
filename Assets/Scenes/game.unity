@@ -291,11 +291,11 @@ GameObject:
   - component: {fileID: 500398978}
   - component: {fileID: 500398977}
   - component: {fileID: 500398976}
-  - component: {fileID: 500398981}
   - component: {fileID: 500398980}
   - component: {fileID: 500398979}
   - component: {fileID: 500398983}
   - component: {fileID: 500398982}
+  - component: {fileID: 500398984}
   m_Layer: 0
   m_Name: Personatje_Iddle_0
   m_TagString: Untagged
@@ -385,8 +385,8 @@ Transform:
   m_GameObject: {fileID: 500398975}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.64, y: 0.98, z: 0}
-  m_LocalScale: {x: 3.5102, y: 3.3003, z: 1}
+  m_LocalPosition: {x: -2.8308, y: 0.6331, z: 0}
+  m_LocalScale: {x: 2.1475403, y: 2.0389252, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1981903986}
@@ -464,23 +464,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28, y: 0.55}
   m_EdgeRadius: 0
---- !u!114 &500398981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 500398975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a5498f2142fb5f498920ea847293587, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _centreZonaContacteTerra: {fileID: 1981903986}
-  _radiContacteTerra: 1
-  _layereTerra:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!114 &500398982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -511,6 +494,27 @@ MonoBehaviour:
   message: Pulsa 'E' para interactuar
   newObject: {fileID: 0}
   nextScene: 
+--- !u!114 &500398984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500398975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc54703479dec774f8dc82b0e5ae1175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _centreZonaContacteTerra: {fileID: 1981903986}
+  _radiContacteTerra: 1
+  _layereTerra:
+    serializedVersion: 2
+    m_Bits: 0
+  _radiInteraccio: 2
+  _layerPalanca:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &583970839
 GameObject:
   m_ObjectHideFlags: 0

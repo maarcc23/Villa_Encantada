@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class pantallainici : MonoBehaviour
+public class DeadPlayAgain : MonoBehaviour
 {
-    public void pantallajuego()
+    public void AgainPlay()
     {
-       SceneManager.LoadScene("game");
+       SceneManager.LoadScene("principal");
     }
 }
+

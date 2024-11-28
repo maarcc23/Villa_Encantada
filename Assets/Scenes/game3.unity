@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &227193265
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -216,13 +216,15 @@ GameObject:
   m_Component:
   - component: {fileID: 372151406}
   - component: {fileID: 372151405}
+  - component: {fileID: 372151407}
+  - component: {fileID: 372151408}
   m_Layer: 0
   m_Name: trampillamapa
-  m_TagString: Untagged
+  m_TagString: trampilla
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &372151405
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -265,7 +267,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -284,12 +286,71 @@ Transform:
   m_GameObject: {fileID: 372151404}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.7319, y: -4.06, z: 0}
+  m_LocalPosition: {x: 8.01, y: -4.46, z: 0}
   m_LocalScale: {x: 1.4237, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &372151407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372151404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cf9b5b70208d5a4ea6a92822d8e0662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escenaDestino: game2
+  posicionDestino: {x: -7.04, y: 7.381, z: 0}
+--- !u!61 &372151408
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372151404}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &562013762
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,7 +437,7 @@ Transform:
   m_GameObject: {fileID: 562013762}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.03, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5032156, y: 0.5269602, z: 1.0884}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -399,7 +460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &624620209
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -524,7 +585,6 @@ GameObject:
   - component: {fileID: 1076715121}
   - component: {fileID: 1076715125}
   - component: {fileID: 1076715124}
-  - component: {fileID: 1076715123}
   m_Layer: 0
   m_Name: fondojuego3
   m_TagString: Untagged
@@ -593,33 +653,12 @@ Transform:
   m_GameObject: {fileID: 1076715120}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.28, y: 3.09, z: 0}
+  m_LocalPosition: {x: 0.2658, y: 2.78, z: 0}
   m_LocalScale: {x: 2.560054, y: 2.1661012, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1076715123
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1076715120}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d2f4303fad3243445a1e8e5dc25c99b4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!50 &1076715124
 Rigidbody2D:
   serializedVersion: 4
@@ -628,7 +667,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1076715120}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -676,14 +715,16 @@ EdgeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.4351505, y: 0.32880977}
-  - {x: -0.42177224, y: -0.0006506443}
+  - {x: -0.4333314, y: -0.50091374}
+  - {x: -1.0915791, y: -0.50594366}
+  - {x: -0.46153706, y: -0.5035634}
   - {x: -0.48195624, y: -2.0203025}
   - {x: -0.8373697, y: -2.003712}
   - {x: -0.84455395, y: -2.3706155}
@@ -705,6 +746,10 @@ EdgeCollider2D:
   - {x: -1.4126781, y: -2.020966}
   - {x: -3.3586965, y: -2.0463827}
   - {x: -3.3523989, y: -0.07085872}
+  - {x: -2.3565717, y: -0.0752061}
+  - {x: -2.3885057, y: -0.5080341}
+  - {x: -1.7344091, y: -0.4874053}
+  - {x: -2.3519318, y: -0.51137245}
   - {x: -2.353348, y: -0.07447955}
   - {x: -2.354114, y: 0.8224062}
   - {x: -2.369368, y: 1.7143605}
@@ -770,7 +815,7 @@ GameObject:
   - component: {fileID: 1337627329}
   m_Layer: 0
   m_Name: Personatje_Iddle_0
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -864,6 +909,10 @@ MonoBehaviour:
   _layereTerra:
     serializedVersion: 2
     m_Bits: 0
+  _radiInteraccio: 2
+  _layerPalanca:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!95 &1337627326
 Animator:
   serializedVersion: 5
@@ -946,7 +995,7 @@ Transform:
   m_GameObject: {fileID: 1337627322}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.44, y: -3.95, z: 0}
+  m_LocalPosition: {x: 8.07, y: -4.34, z: 0}
   m_LocalScale: {x: 2.16289, y: 2.065431, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1015,7 +1064,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &2115439620
 SpriteRenderer:
   m_ObjectHideFlags: 0

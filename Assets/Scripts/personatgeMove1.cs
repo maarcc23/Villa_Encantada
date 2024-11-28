@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;  // Necesario para cambiar de escena (nivel)
+using UnityEngine.SceneManagement;
 
-public class Personatge1 : MonoBehaviour
+public class personatgeMove1 : MonoBehaviour
 {
     private Rigidbody2D _rigidbody2D;
-    private Animator _animator; 
+    private Animator _animator; // Referencia al Animator
     private float _velocitatCorre;
 
     public Transform _centreZonaContacteTerra;
@@ -19,18 +19,17 @@ public class Personatge1 : MonoBehaviour
 
     private bool _palancaActivada;
 
+    // Start is called before the first frame update
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _animator = GetComponent<Animator>(); 
+        _animator = GetComponent<Animator>(); // Obtiene el Animator
         _rigidbody2D.freezeRotation = true;
         _velocitatCorre = 5f;
         _tocaTerra = false;
         _cercaPalanca = false;
         _palancaActivada = false;
 
-        // Asegurarse de que la gravedad no afecte al personaje
-        _rigidbody2D.gravityScale = 0;
     }
 
     void Update()
@@ -39,30 +38,18 @@ public class Personatge1 : MonoBehaviour
         _cercaPalanca = Physics2D.OverlapCircle(transform.position, _radiInteraccio, _layerPalanca);
 
         Debug.DrawRay(_centreZonaContacteTerra.position, Vector2.down, Color.green);
+        float inputHorizontal = Input.GetAxisRaw("Horizontal") * _velocitatCorre;
+        float inputVertical = Input.GetAxisRaw("Vertical") * _velocitatCorre;
 
-        // Captura de entradas de movimiento
-        float inputHorizontal = Input.GetAxisRaw("Horizontal");
-        float inputVertical = Input.GetAxisRaw("Vertical");
+        _rigidbody2D.velocity = new Vector2(inputHorizontal, _rigidbody2D.velocity.y);
 
-        // Normalizar para mantener velocidad constante en diagonal
-        Vector2 direccioMoviment = new Vector2(inputHorizontal, inputVertical).normalized;
-
-        // Aplicar movimiento al Rigidbody2D
-        _rigidbody2D.velocity = direccioMoviment * _velocitatCorre;
-
-        // Animaciones y orientación del personaje
-        if (direccioMoviment.x > 0)
-        {
+        if (inputHorizontal > 0) { // Es mou a la dreta.
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
-        }
-        else if (direccioMoviment.x < 0)
-        {
+        } else if (inputHorizontal < 0) { // Es mou a l'esquerra.
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
 
-        // Actualiza parámetros en el Animator
-        _animator.SetFloat("Speed", direccioMoviment.magnitude);
-        _animator.SetFloat("Horizontal", direccioMoviment.x);
-        _animator.SetFloat("Vertical", direccioMoviment.y);
+        // Actualiza el parámetro de velocidad en el Animator
+        _animator.SetFloat("Speed", Mathf.Abs(inputHorizontal));
     }
 }
