@@ -51,28 +51,46 @@ public class OperacionMatematica : MonoBehaviour
 
 
         //Hud
-        calculo();
-        if (!problema2) { 
-        preguntaText.text = "¿Cual es la respuesta de: " + numOperaciones[0] + " x " + numOperaciones[1];
+        //calculo();
+        /*if (!problema2) { 
+            preguntaText.text = "Quina és la resposta de: " + numOperaciones[0] + " x " + numOperaciones[1];
         }
-
         else
         {
-            preguntaText.text = "¿Cual es la respuesta de: " + numOperaciones[2] + " + " + numOperaciones[3];
+            preguntaText.text = "Quina és la resposta de: " + numOperaciones[2] + " + " + numOperaciones[3];
+        }*/
+
+        numero1 = Random.Range(1, 9);
+        numero2 = Random.Range(1, 9);
+
+        preguntaText.text = "Quina és la resposta de: " + numero1 + " x " + numero2;
+
+        if (calculoMatematico.activeSelf == true)
+        {
+            calculoMatematico.SetActive(false);
+            //RealizarOperacionMatematica();
+
+            SeleccionarOperacionAleatoria();
         }
-       
-        calculoMatematico.SetActive(false);
-        //RealizarOperacionMatematica();
-
-        // SeleccionarOperacionAleatoria();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(response)
+
+        if (response)
+        {
             inputField.onValueChanged.AddListener(respuesta); // lo de escribir 
+            //Debug.Log("Encert");
+
+            if (inputField.text == resultadoOperacion.ToString())
+            {
+                Debug.Log("Encert");
+            }
+        }
+            
+
+        
     }
 
     private void calculo()
@@ -144,17 +162,17 @@ public class OperacionMatematica : MonoBehaviour
         return value1 / value2;
     }
 
-   /* public void SeleccionarOperacionAleatoria()
+    public void SeleccionarOperacionAleatoria()
     {
         // Selección aleatoria entre las operaciones
         operacionSeleccionada = (Operacion)Random.Range(0, 4);  // 0: Sumar, 1: Restar, 2: Multiplicar, 3: Dividir
         RealizarOperacionMatematica();  // Realizamos la operación seleccionada
-    }*/
+    }
 
 
     public void RealizarOperacionMatematica()
     {
-
+        
         switch (operacionSeleccionada)
         {
             case Operacion.Sumar:
@@ -225,7 +243,10 @@ public class OperacionMatematica : MonoBehaviour
         int userAnswer;
         bool isValid = int.TryParse(text, out userAnswer);
 
-        if (isValid && userAnswer == result) // Aquí puedes cambiar la operación si es necesario (por ejemplo, Restar())
+        Debug.Log("inputField.text=" + inputField.text);
+        Debug.Log("resultadoOperacion.ToString()=" + resultadoOperacion.ToString());
+
+        if (inputField.text == resultadoOperacion.ToString()) // Aquí puedes cambiar la operación si es necesario (por ejemplo, Restar())
         {
             textoHUD.text = "¡Respuesta correcta!";
             puntajeActual += 10; // Incrementar puntaje cuando la respuesta es correcta

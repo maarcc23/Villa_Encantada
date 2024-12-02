@@ -57,7 +57,7 @@ public class Personatge1 : MonoBehaviour
         if (collision.CompareTag("PuertaGame3"))
         {
             Debug.Log("¡Has tocado la puerta!");
-            GameObject.Find("fondojuego3").GetComponent<OperacionMatematica>().RealizarOperacionMatematica();
+            //GameObject.Find("fondojuego3").GetComponent<OperacionMatematica>().RealizarOperacionMatematica();
         }
     }
     private void Muerte()
