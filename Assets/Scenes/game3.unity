@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Respuesta:'
+  m_text: 'Resposta:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18d4a7a20b4bfa142af2a3cb1c10238e, type: 2}
   m_sharedMaterial: {fileID: -6874783237207127300, guid: 18d4a7a20b4bfa142af2a3cb1c10238e, type: 2}
@@ -1093,20 +1093,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0a94a7b68f34f4995633b719842d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numero1: 10
-  numero2: 5
   numOperaciones: 
   resultadoOperacion: 0
   puntajeActual: 0
   puntajeRequeridoParaSiguienteNivel: 50
   tagPlayer: Player
-  calculoMatematico: {fileID: 1172730130}
+  calculoMatematico: {fileID: 993886970}
   inputField: {fileID: 1584199478}
   textoHUD: {fileID: 1298555255}
-  isMultiplication: 1
+  isMultiplication: 0
   isDivition: 0
   isRest: 0
-  isSum: 0
+  isSum: 1
   problema2: 0
   result: 0
   preguntaText: {fileID: 1298555255}
@@ -1140,8 +1138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f0a94a7b68f34f4995633b719842d0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numero1: 10
-  numero2: 5
   numOperaciones: 
   resultadoOperacion: 0
   puntajeActual: 0
@@ -1428,7 +1424,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1789.6528, y: 338}
+  m_AnchoredPosition: {x: 1789.6, y: 337.38}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &851675464
@@ -1451,7 +1447,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Respuesta:'
+  m_text: 'Resposta:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18d4a7a20b4bfa142af2a3cb1c10238e, type: 2}
   m_sharedMaterial: {fileID: -6874783237207127300, guid: 18d4a7a20b4bfa142af2a3cb1c10238e, type: 2}

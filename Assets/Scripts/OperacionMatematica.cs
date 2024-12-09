@@ -8,13 +8,13 @@ using UnityEngine.SceneManagement;  // Necesario para cambiar de escena (nivel)
 public class OperacionMatematica : MonoBehaviour
 {
 
-    public float numero1 = 10f;
-    public float numero2 = 5f;
+     float numero1 = 10f;
+     float numero2 = 5f;
 
     public List<int>numOperaciones = new List<int>();
 
 
-
+    List<string> operadores = new List<string>();  
     public int resultadoOperacion;
     public int puntajeActual = 0;
     public int puntajeRequeridoParaSiguienteNivel = 50;
@@ -35,8 +35,13 @@ public class OperacionMatematica : MonoBehaviour
     public int result;
     public TextMeshProUGUI preguntaText;
     bool response;
+    string currentOperator = "";
     void Start()
     {
+        operadores.Add("+");
+        operadores.Add("-");
+        operadores.Add("*");
+        operadores.Add("/");
         // preguntaText = GetComponent<TextMeshProUGUI>();
         // se generan 4 números aleatorios del 1 al 9 y se introducen en una lista. 
         numOperaciones.Add(Random.Range(1, 9));
@@ -44,6 +49,8 @@ public class OperacionMatematica : MonoBehaviour
         numOperaciones.Add(Random.Range(1, 9));
         numOperaciones.Add(Random.Range(1, 9));
         result = 0;
+        calculo();
+        resultadoOperacion = result;
         // textoHUD.text = " ";
         inputField.text = " ";
         preguntaText.text = " ";
@@ -52,26 +59,52 @@ public class OperacionMatematica : MonoBehaviour
 
         //Hud
         //calculo();
-        /*if (!problema2) { 
-            preguntaText.text = "Quina és la resposta de: " + numOperaciones[0] + " x " + numOperaciones[1];
+        if (!problema2) {
+
+
+            currentOperator = VerificarOperador(operadores);
+            preguntaText.text = "Quina és la resposta de: " + numOperaciones[0] + " " + currentOperator + " " + numOperaciones[1];
         }
         else
         {
-            preguntaText.text = "Quina és la resposta de: " + numOperaciones[2] + " + " + numOperaciones[3];
-        }*/
+            currentOperator = VerificarOperador(operadores);
+            preguntaText.text = "Quina és la resposta de: " + numOperaciones[2] + " " +currentOperator +" "+ numOperaciones[3];
+        }
 
-        numero1 = Random.Range(1, 9);
-        numero2 = Random.Range(1, 9);
+        //numero1 = Random.Range(1, 9);
+        //numero2 = Random.Range(1, 9);
 
-        preguntaText.text = "Quina és la resposta de: " + numero1 + " x " + numero2;
+       // preguntaText.text = "Quina és la resposta de: " + numero1 + " * " + numero2;
 
-        if (calculoMatematico.activeSelf == true)
+       if (calculoMatematico.activeSelf == true)
         {
             calculoMatematico.SetActive(false);
             //RealizarOperacionMatematica();
 
-            SeleccionarOperacionAleatoria();
+            //SeleccionarOperacionAleatoria();
         }
+    }
+
+    private string VerificarOperador(List<string> operadores)
+    {
+        string returnStr = "";
+        if (isSum)
+        {
+            returnStr = operadores[0];
+        }
+        if (isRest)
+        {
+            returnStr = operadores[1];
+        }
+        if (isMultiplication)
+        {
+            returnStr =  operadores[2];
+        }
+        if (isDivition)
+        {
+            returnStr = operadores[3];
+        }
+        return returnStr;
     }
 
     // Update is called once per frame
@@ -89,8 +122,6 @@ public class OperacionMatematica : MonoBehaviour
             }
         }
             
-
-        
     }
 
     private void calculo()
@@ -111,11 +142,11 @@ public class OperacionMatematica : MonoBehaviour
         {
             if (problema2)
             {
-                result = Sum(numOperaciones[2], numOperaciones[3]);
+                result = Restar(numOperaciones[2], numOperaciones[3]);
             }
             else
             {
-                result = Sum(numOperaciones[0], numOperaciones[1]);
+                result = Restar(numOperaciones[0], numOperaciones[1]);
             }
 
         }
@@ -123,11 +154,11 @@ public class OperacionMatematica : MonoBehaviour
         {
             if (problema2)
             {
-                result = Sum(numOperaciones[2], numOperaciones[3]);
+                result = Multiplicar(numOperaciones[2], numOperaciones[3]);
             }
             else
             {
-                result = Sum(numOperaciones[0], numOperaciones[1]);
+                result = Multiplicar(numOperaciones[0], numOperaciones[1]);
             }
 
         }
@@ -135,11 +166,11 @@ public class OperacionMatematica : MonoBehaviour
         {
             if (problema2)
             {
-                result = Sum(numOperaciones[2], numOperaciones[3]);
+                result = Dividir(numOperaciones[2], numOperaciones[3]);
             }
             else
             {
-                result = Sum(numOperaciones[0], numOperaciones[1]);
+                result =Dividir(numOperaciones[0], numOperaciones[1]);
             }
 
         }
