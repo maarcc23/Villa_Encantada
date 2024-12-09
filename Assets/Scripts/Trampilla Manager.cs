@@ -5,25 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class TrampillaManager : MonoBehaviour
 {
-    public string escenaDestino; // Nombre de la escena a cargar
+    public string game3; // Nombre de la escena a cargar
     public Vector3 posicionDestino; // Posición donde aparecerá el personaje en la nueva escena
-
+     
     private void OnTriggerEnter2D(Collider2D other)
-    {
+    {   
         if (other.CompareTag("Player"))
         {
+            
             // Guardar la posición destino para la próxima escena
             PlayerPrefs.SetFloat("posX", posicionDestino.x);
             PlayerPrefs.SetFloat("posY", posicionDestino.y);
             PlayerPrefs.SetFloat("posZ", posicionDestino.z);
 
             // Cargar la escena destino
-            SceneManager.LoadScene("game3");
+            SceneManager.LoadScene(game3);
         }
     }
-
+    
+ 
+    
     private void Start()
     {
+       
         // Si el jugador reaparece, colocar en la posición guardada
         if (PlayerPrefs.HasKey("posX"))
         {

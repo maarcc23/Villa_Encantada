@@ -1,24 +1,34 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PlayerDeath : MonoBehaviour
 {
-   [Tooltip("PantallaMuerte")]
-    public string sceneToLoad;
+    public Animator animator;  // Referencia al Animator del personaje
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void Start()
     {
-        // Verificamos si el objeto con el que colisionamos tiene el tag "Square"
-        if (collision.CompareTag("Square"))
+        if (animator == null)
         {
-            // Cargar la escena especificada
-            if (!string.IsNullOrEmpty(sceneToLoad))
-            {
-                SceneManager.LoadScene(sceneToLoad);
-            }
-            
+            animator = GetComponent<Animator>(); // Si no se asignó, se obtiene automáticamente
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Square") || other.CompareTag("flecha")) // Asegúrate de que el objeto tiene el tag "Square"
+        {
+            // Activa el trigger de la animación de muerte
+            animator.SetTrigger("Die");
+
+            // Llamar a la función para cargar la escena de "PantallaMuerte" después de la animación
+            Invoke("LoadDeathScene", 1.5f);  // Asegúrate de que la escena se carga después de un pequeño retardo
+        }
+    }
+
+    private void LoadDeathScene()
+    {
+        // Aquí puedes cargar la escena de muerte
+        UnityEngine.SceneManagement.SceneManager.LoadScene("PantallaMuerte");
     }
 }

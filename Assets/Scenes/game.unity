@@ -1121,7 +1121,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Pulsa "E" para activar la palanca  y  ir al mapa!
+  m_text: 'PREM "E" per activar la palanca  i  anar al mapa!
 
 '
   m_isRightToLeft: 0
@@ -1506,7 +1506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cuidado con las cuchillas!
+  m_text: 'Comte amb las cuchillas!
 
 
 '
@@ -1868,6 +1868,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e13648a8dc1f34419eaca699afcf1af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 500398975}
 --- !u!1 &1981903985
 GameObject:
   m_ObjectHideFlags: 0
