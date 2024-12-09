@@ -1121,7 +1121,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Pulsa "E" para activar la palanca  y  ir al mapa!
+  m_text: 'PREM "E" per activar la palanca  i  anar al mapa!
 
 '
   m_isRightToLeft: 0
@@ -1506,7 +1506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cuidado con las cuchillas!
+  m_text: 'Comte amb las cuchillas!
 
 
 '

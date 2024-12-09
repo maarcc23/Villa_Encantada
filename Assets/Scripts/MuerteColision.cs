@@ -16,13 +16,13 @@ public class PlayerDeath : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Square")) // Asegúrate de que el objeto tiene el tag "Square"
+        if (other.CompareTag("Square") || other.CompareTag("flecha")) // Asegúrate de que el objeto tiene el tag "Square"
         {
             // Activa el trigger de la animación de muerte
             animator.SetTrigger("Die");
 
             // Llamar a la función para cargar la escena de "PantallaMuerte" después de la animación
-            Invoke("LoadDeathScene", 1f);  // Asegúrate de que la escena se carga después de un pequeño retardo
+            Invoke("LoadDeathScene", 1.5f);  // Asegúrate de que la escena se carga después de un pequeño retardo
         }
     }
 

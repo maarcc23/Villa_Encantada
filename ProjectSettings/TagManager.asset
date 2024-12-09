@@ -7,6 +7,11 @@ TagManager:
   - Square
   - trampilla
   - KeySquare
+  - cofre
+  - llave
+  - cofreAbierto
+  - mapa
+  - flecha
   layers:
   - Default
   - TransparentFX
