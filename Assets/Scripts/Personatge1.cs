@@ -9,10 +9,9 @@ public class Personatge1 : MonoBehaviour
     private Animator _animator; 
     private float _velocitatCorre;
 
-    public Transform _centreZonaContacteTerra;
     public float _radiContacteTerra;
     public LayerMask _layereTerra;
-    private bool _tocaTerra;
+    //private bool _tocaTerra;
     private bool _cercaPalanca;
     public float _radiInteraccio = 2f;
     public LayerMask _layerPalanca;
@@ -25,7 +24,7 @@ public class Personatge1 : MonoBehaviour
         _animator = GetComponent<Animator>(); 
         _rigidbody2D.freezeRotation = true;
         _velocitatCorre = 5f;
-        _tocaTerra = false;
+        //_tocaTerra = false;
         _cercaPalanca = false;
         _palancaActivada = false;
 
@@ -35,10 +34,10 @@ public class Personatge1 : MonoBehaviour
 
     void Update()
     {
-        _tocaTerra = Physics2D.OverlapCircle(_centreZonaContacteTerra.position, _radiContacteTerra, _layereTerra);
+        //_tocaTerra = Physics2D.OverlapCircle(_centreZonaContacteTerra.position, _radiContacteTerra, _layereTerra);
         _cercaPalanca = Physics2D.OverlapCircle(transform.position, _radiInteraccio, _layerPalanca);
 
-        Debug.DrawRay(_centreZonaContacteTerra.position, Vector2.down, Color.green);
+        //Debug.DrawRay(_centreZonaContacteTerra.position, Vector2.down, Color.green);
 
         // Captura de entradas de movimiento
         float inputHorizontal = Input.GetAxisRaw("Horizontal");
@@ -64,5 +63,35 @@ public class Personatge1 : MonoBehaviour
         _animator.SetFloat("Speed", direccioMoviment.magnitude);
         _animator.SetFloat("Horizontal", direccioMoviment.x);
         _animator.SetFloat("Vertical", direccioMoviment.y);
+    }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+
+    {
+        if (collision.CompareTag("NoTocar"))
+        {
+            Muerte();
+            Debug.Log("�Has tocado un objeto NoTocar!");
+        }
+
+        if (collision.CompareTag("PuertaGame3"))
+        {
+            Debug.Log("�Has tocado la puerta!");
+            //GameObject.Find("fondojuego3").GetComponent<OperacionMatematica>().RealizarOperacionMatematica();
+        }
+    }
+    private void Muerte()
+    {
+       
+        gameObject.SetActive(false);
+
+       
+        Invoke("ReiniciarNivel", 2f);  
+    }
+
+    
+    private void ReiniciarNivel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
     }
 }

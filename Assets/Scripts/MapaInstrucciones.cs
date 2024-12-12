@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-
 public class MapaInstrucciones : MonoBehaviour
 {
 
@@ -31,8 +30,6 @@ public TextMeshProUGUI messageText; // Arrastra aquí el componente de texto de 
         // Ocultar el texto
         messageText.enabled = false;
     }
-
-
 
 
     private void OnCollisionEnter(Collision collision)

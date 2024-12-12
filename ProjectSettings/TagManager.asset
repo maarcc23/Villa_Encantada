@@ -12,6 +12,8 @@ TagManager:
   - cofreAbierto
   - mapa
   - flecha
+  - NoTocar
+  - PuertaGame3
   layers:
   - Default
   - TransparentFX
