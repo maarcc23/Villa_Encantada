@@ -12,13 +12,12 @@ public class OperacionMatematica : MonoBehaviour
      float numero2 = 5f;
 
     public List<int>numOperaciones = new List<int>();
-
-
     List<string> operadores = new List<string>();  
     public int resultadoOperacion;
     public int puntajeActual = 0;
     public int puntajeRequeridoParaSiguienteNivel = 50;
     private bool nivelCompletado = false;
+    private bool tieneLaClave = false;
     public string tagPlayer = "Player";
     public GameObject calculoMatematico;
     public TMP_InputField inputField;    // El campo donde el usuario escribe
@@ -42,8 +41,7 @@ public class OperacionMatematica : MonoBehaviour
         operadores.Add("-");
         operadores.Add("*");
         operadores.Add("/");
-        // preguntaText = GetComponent<TextMeshProUGUI>();
-        // se generan 4 números aleatorios del 1 al 9 y se introducen en una lista. 
+       
         numOperaciones.Add(Random.Range(1, 9));
         numOperaciones.Add(Random.Range(1, 9));
         numOperaciones.Add(Random.Range(1, 9));
@@ -51,7 +49,7 @@ public class OperacionMatematica : MonoBehaviour
         result = 0;
         calculo();
         resultadoOperacion = result;
-        // textoHUD.text = " ";
+      
         inputField.text = " ";
         preguntaText.text = " ";
 
@@ -246,6 +244,7 @@ public class OperacionMatematica : MonoBehaviour
 
         // Cambia a la escena siguiente
       SceneManager.LoadScene("PantallaWin");
+
     }
 
 
@@ -293,4 +292,25 @@ public class OperacionMatematica : MonoBehaviour
         }
 
     }
+    public void RecogerClave()
+    {
+        tieneLaClave = true;
+        Debug.Log("¡Clave recogida!");
+    }
+
+    private void abrirPuerta()
+    {
+        if (tieneLaClave)  // El jugador debe tener la clave para abrir la puerta
+        {
+            Debug.Log("¡Puerta abierta!");
+            // Aquí iría la lógica para abrir la puerta, por ejemplo, cambiando el estado del objeto puerta o cargando una nueva escena
+            SceneManager.LoadScene("PantallaWin");
+        }
+        else
+        {
+            Debug.Log("No tienes la clave para abrir la puerta.");
+            textoHUD.text = "Necesitas la clave para abrir la puerta.";
+        }
+    }
+
 }
