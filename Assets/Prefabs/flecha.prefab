@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6565845356866408291}
   m_Layer: 0
   m_Name: flecha
-  m_TagString: Untagged
+  m_TagString: flecha
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -117,8 +117,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1521040805
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300156, guid: 7810966f0f690954c87305933cabf2b0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -140,19 +140,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 321864468627765866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f1f7181b9631af419d72d8cc8dc6f78, type: 3}
+  m_Script: {fileID: 11500000, guid: e6cece24406b25b4a8ebaff4fd3bf231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arraySpritesNumeros:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  prefabExplosio: {fileID: 0}
-  prefabFlecha: {fileID: 987083297778883385, guid: 27277137d0605bd45bd741cdb791e0c1, type: 3}
+  prefabExplosio: {fileID: 5599523269752735804, guid: 0551c6e3f954c5a4b8517696bdc5fb31, type: 3}

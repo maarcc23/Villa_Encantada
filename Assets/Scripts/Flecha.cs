@@ -13,14 +13,7 @@ public class Flecha : MonoBehaviour
 
     void Start()
     {
-        limitesPantallaMaxX = Camera.main.ViewportToWorldPoint(new Vector2(1, 0)); // Obtener límites
-        limitesPantallaMinX = Camera.main.ViewportToWorldPoint(new Vector2(0, 0)); // Obtener límites
-        direccion = Random.Range(0, 2) == 0 ? -1 : 1; // Dirección aleatoria
-
-        if (direccion < 0)
-        {
-            gameObject.GetComponent<SpriteRenderer>().flipX = true;
-        }
+        
     }
 
     void Update()
@@ -31,10 +24,20 @@ public class Flecha : MonoBehaviour
         transform.position = posicion;
 
         // Explosión si llega al borde
-        if (transform.position.x > limitesPantallaMaxX.x || transform.position.x < limitesPantallaMinX.x)
+        if (transform.position.x > limitesPantallaMaxX.x + GetComponent<SpriteRenderer>().sprite.bounds.size.x/2 || 
+        transform.position.x < limitesPantallaMinX.x - GetComponent<SpriteRenderer>().sprite.bounds.size.x/2)
         {
-            Explota();
+            //Explota();
         }
+    }
+
+    public void AsignarDirecFlecha(int direccioRebuda){
+         
+            direccion = direccioRebuda; // Dirección aleatoria
+            if (direccion < 0)
+            {
+                gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            }
     }
 
     private void Explota()

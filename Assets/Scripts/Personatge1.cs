@@ -71,13 +71,19 @@ public class Personatge1 : MonoBehaviour
         if (collision.CompareTag("NoTocar"))
         {
             Muerte();
-            Debug.Log("�Has tocado un objeto NoTocar!");
+            Debug.Log("Has tocado un objeto NoTocar!");
         }
 
         if (collision.CompareTag("PuertaGame3"))
         {
-            Debug.Log("�Has tocado la puerta!");
+            Debug.Log("Has tocado la puerta!");
             //GameObject.Find("fondojuego3").GetComponent<OperacionMatematica>().RealizarOperacionMatematica();
+        }
+        // Comprueba si el objeto que tocamos tiene el tag "PantallaFlecha"
+        if (collision.CompareTag("PantallaFlecha"))
+        {
+            // Carga la escena deseada, por ejemplo "NombreDeLaEscena"
+            SceneManager.LoadScene("game4");
         }
     }
     private void Muerte()
@@ -88,10 +94,10 @@ public class Personatge1 : MonoBehaviour
        
         Invoke("ReiniciarNivel", 2f);  
     }
-
     
     private void ReiniciarNivel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
     }
+
 }
