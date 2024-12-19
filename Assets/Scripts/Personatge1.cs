@@ -124,7 +124,12 @@ public class Personatge1 : MonoBehaviour
         {
             Destroy(collision.gameObject); // Destruye la llave
         }
+        if (collision.CompareTag("PantallaFlecha"))
+        {
+            SceneManager.LoadScene("game4");
+        }
     }
+
 
 
     private void Muerte()
