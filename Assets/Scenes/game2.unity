@@ -2515,6 +2515,7 @@ MonoBehaviour:
   _layerPalanca:
     serializedVersion: 2
     m_Bits: 0
+  tieneLlave: 0
   menuPausa: {fileID: 0}
 --- !u!114 &1316686883
 MonoBehaviour:
@@ -4004,8 +4005,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf9b5b70208d5a4ea6a92822d8e0662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game3: game3
-  posicionDestino: {x: 8.01, y: -4.46, z: 0}
+  game4: game4
+  posicionDestino: {x: 5, y: -1, z: 0}
 --- !u!61 &1948757781
 BoxCollider2D:
   m_ObjectHideFlags: 0

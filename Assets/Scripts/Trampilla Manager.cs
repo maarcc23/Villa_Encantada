@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class TrampillaManager : MonoBehaviour
 {
-    public string game3; // Nombre de la escena a cargar
+    public string game4; // Nombre de la escena a cargar
     public Vector3 posicionDestino; // Posición donde aparecerá el personaje en la nueva escena
      
     private void OnTriggerEnter2D(Collider2D other)
@@ -19,7 +19,7 @@ public class TrampillaManager : MonoBehaviour
             PlayerPrefs.SetFloat("posZ", posicionDestino.z);
 
             // Cargar la escena destino
-            SceneManager.LoadScene(game3);
+            SceneManager.LoadScene(game4);
         }
     }
     
