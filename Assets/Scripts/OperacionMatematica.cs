@@ -256,7 +256,7 @@ public class OperacionMatematica : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == tagPlayer && player.tieneLlave)
+        if (collision.gameObject.tag == tagPlayer)
         {
             calculoMatematico.SetActive(true);
             response = true;
