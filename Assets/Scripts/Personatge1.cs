@@ -15,9 +15,12 @@ public class Personatge1 : MonoBehaviour
     private bool _cercaPalanca;
     public float _radiInteraccio = 2f;
     public LayerMask _layerPalanca;
-
+    public GameObject menuPausa;
     private bool _palancaActivada;
-
+    bool pjMuere=false;
+    //KeyCode key = KeyCode.Esc;
+    float timer = 2f;
+    
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -34,6 +37,28 @@ public class Personatge1 : MonoBehaviour
 
     void Update()
     {
+        /*if (Input.GetKeyDown(KeyCode.Escape)){
+            if(switchPause ==0){
+            menuPausa.SetActive(true);
+            Time.timeScale = 0.0f;
+            switchPause =1;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            if(switchPause ==1){
+            menuPausa.SetActive(false);
+            Time.timeScale = 1;
+            switchPause =0;
+            }
+        }*/
+
+        if(pjMuere){
+            timer  -= 1 * Time.deltaTime;
+            if(timer <=0){
+                 SceneManager.LoadScene("PantallaMuerte");
+                 
+            }
+        }
         //_tocaTerra = Physics2D.OverlapCircle(_centreZonaContacteTerra.position, _radiContacteTerra, _layereTerra);
         _cercaPalanca = Physics2D.OverlapCircle(transform.position, _radiInteraccio, _layerPalanca);
 
@@ -79,13 +104,28 @@ public class Personatge1 : MonoBehaviour
             Debug.Log("Has tocado la puerta!");
             //GameObject.Find("fondojuego3").GetComponent<OperacionMatematica>().RealizarOperacionMatematica();
         }
-        // Comprueba si el objeto que tocamos tiene el tag "PantallaFlecha"
-        if (collision.CompareTag("PantallaFlecha"))
+        
+       
+        //Comprueba si el objeto que tocamos tiene el tag "PantallaFlecha"
+        
+        if (collision.CompareTag("flechamorir"))
         {
-            // Carga la escena deseada, por ejemplo "NombreDeLaEscena"
-            SceneManager.LoadScene("game4");
+            pjMuere=true;
+           
+        }
+        
+        if (collision.CompareTag("llave1"))
+        {
+            SceneManager.LoadScene("game3");
+        }
+        
+        if (collision.CompareTag("llave"))
+        {
+            Destroy(collision.gameObject); // Destruye la llave
         }
     }
+
+
     private void Muerte()
     {
        

@@ -16,7 +16,7 @@ public class PlayerDeath : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Square") || other.CompareTag("flecha")) // Asegúrate de que el objeto tiene el tag "Square"
+        if (other.CompareTag("Square") || other.CompareTag("flechamorir")) // Asegúrate de que el objeto tiene el tag "Square"
         {
             // Activa el trigger de la animación de muerte
             animator.SetTrigger("Die");

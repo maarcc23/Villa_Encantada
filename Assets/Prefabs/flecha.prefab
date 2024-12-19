@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6565845356866408291}
   m_Layer: 0
   m_Name: flecha
-  m_TagString: flecha
+  m_TagString: flechamorir
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
