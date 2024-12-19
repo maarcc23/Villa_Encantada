@@ -15,8 +15,9 @@ public class Personatge1 : MonoBehaviour
     private bool _cercaPalanca;
     public float _radiInteraccio = 2f;
     public LayerMask _layerPalanca;
-
+    public bool tieneLlave = false;
     private bool _palancaActivada;
+
 
     void Start()
     {
@@ -98,6 +99,14 @@ public class Personatge1 : MonoBehaviour
     private void ReiniciarNivel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "llave")
+        {
+            tieneLlave = true;
+        }
     }
 
 }

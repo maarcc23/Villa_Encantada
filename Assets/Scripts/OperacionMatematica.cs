@@ -23,6 +23,8 @@ public class OperacionMatematica : MonoBehaviour
     public GameObject calculoMatematico;
     public TMP_InputField inputField;    // El campo donde el usuario escribe
     public TextMeshProUGUI textoHUD;
+    public Personatge1 player; 
+
     // Start is called before the first frame update
     private enum Operacion { Sumar, Restar, Multiplicar, Dividir };
     private Operacion operacionSeleccionada;
@@ -38,6 +40,7 @@ public class OperacionMatematica : MonoBehaviour
     string currentOperator = "";
     void Start()
     {
+       
         operadores.Add("+");
         operadores.Add("-");
         operadores.Add("*");
@@ -253,7 +256,7 @@ public class OperacionMatematica : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == tagPlayer)
+        if (collision.gameObject.tag == tagPlayer && player.tieneLlave)
         {
             calculoMatematico.SetActive(true);
             response = true;
